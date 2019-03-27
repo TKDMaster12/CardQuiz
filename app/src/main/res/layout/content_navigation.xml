@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Navigation"
+    tools:showIn="@layout/app_bar_navigation">
+
+    <!-- parent container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- top row container -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- computer button -->
+            <Button
+                android:id="@+id/computerBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/yellow"
+                android:drawableTop="@drawable/computer"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/home_button_paddingTop"
+                android:text="@string/home_computer"
+                android:textAllCaps="false"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/home_button_textSize" />
+
+            <!-- sports button -->
+            <Button
+                android:id="@+id/sportsBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/darkGreyShade2"
+                android:drawableTop="@drawable/sports"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/home_button_paddingTop"
+                android:text="@string/home_sports"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_textSize" />
+        </LinearLayout>
+
+        <!-- second row container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- inventions button -->
+            <Button
+                android:id="@+id/inventionsBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/magenta"
+                android:drawableStart="@drawable/invention"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingStart="@dimen/home_button_paddingStart"
+                android:paddingEnd="@dimen/home_button_paddingStart"
+                android:text="@string/home_inventions"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_textSize" />
+
+        </LinearLayout>
+
+        <!-- third row container -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- general knowledge button -->
+            <Button
+                android:id="@+id/generalBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/lightPurple"
+                android:drawableTop="@drawable/general"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/home_button_paddingTop"
+                android:text="@string/home_general"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_textSize" />
+
+            <!-- science button -->
+            <Button
+                android:id="@+id/scienceBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/turquoise"
+                android:drawableTop="@drawable/science"
+                android:paddingTop="@dimen/home_button_paddingTop"
+                android:text="@string/home_science"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_textSize" />
+        </LinearLayout>
+
+        <!-- fourth row container -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- english button -->
+            <Button
+                android:id="@+id/englishBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:drawableTop="@drawable/english"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/home_button_paddingTop2"
+                android:text="@string/home_english"
+                android:textAllCaps="false"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/home_button_textSize" />
+
+            <!-- authors button -->
+            <Button
+                android:id="@+id/authorsBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/brown"
+                android:drawableTop="@drawable/books"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/home_button_paddingTop"
+                android:text="@string/home_authors"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_textSize" />
+        </LinearLayout>
+
+        <!-- fifth row container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- math button -->
+            <Button
+                android:id="@+id/mathsBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:drawableStart="@drawable/maths"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingStart="@dimen/home_button_padding"
+                android:paddingEnd="@dimen/home_button_padding"
+                android:text="@string/home_maths"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/home_button_textSize" />
+        </LinearLayout>
+
+        <!-- sixth row container -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- capitals Button -->
+            <Button
+                android:id="@+id/capitalsBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:drawableTop="@drawable/capital"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/home_button_paddingTop"
+                android:text="@string/home_capitals"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <!-- currency Button -->
+            <Button
+                android:id="@+id/currencyBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/home_button_height"
+                android:layout_margin="@dimen/home_button_margin"
+                android:layout_weight="1"
+                android:background="@color/GreyBlue"
+                android:drawableTop="@drawable/currency"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingTop="@dimen/home_button_paddingTop"
+                android:text="@string/home_currency"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

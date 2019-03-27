@@ -1,0 +1,491 @@
+<?xml version=".9.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Scores">
+
+    <!-- top navigation toolbar-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- container for scores-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <!-- container for titles -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/score_category_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_TitleSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/score_recent_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_TitleSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/score_high_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_TitleSize"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for computer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_computer"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/computerRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/computerHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for sports -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_sports"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/sportsRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/sportsHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for inventions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_inventions"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/inventionsRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/inventionsHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for general knowledge -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_general"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/generalRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/generalHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for science -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_science"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/scienceRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/scienceHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for english -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_english"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/englishRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/englishHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for authors -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_authors"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/booksRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/booksHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for math -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_maths"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/mathsRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/mathsHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for capitals -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_capitals"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/home_button_textSize" />
+
+                <TextView
+                    android:id="@+id/capitalsRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/capitalsHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+
+            <!-- dividing line -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/score_divider_height"
+                android:background="@color/dividerGrey" />
+
+            <!-- container for currency -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".9"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:text="@string/home_currency"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/currencyRecentScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/currencyHighScore"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/score_textView_height"
+                    android:layout_weight=".6"
+                    android:paddingTop="@dimen/score_textView_paddingTop"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/score_textView_textSize" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
